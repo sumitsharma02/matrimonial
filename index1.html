@@ -1,0 +1,353 @@
+<html>
+<head>
+  <title>Jodi No.1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <script src="js/bootstrap.bundle.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <div class="background ">
+      <div class="row ms-0 sticky-top" id="bar">
+        <ul>
+          <a href="#logo"><img src="images/logo.png" height="45" style="margin-right:10%;" alt=""></a>
+          <li>
+            <a href="index1.html">HOME</a>
+          </li>
+          <li>
+            <a href="aboutus.html">About Us</a>
+          </li>
+          <li>
+            <a href="contactus.html">Contact Us</a>
+          </li>
+          <li>
+            <button type="button" id="bt" class="btn text-light" data-bs-toggle="modal" data-bs-target="#SignupModal">
+              <i class="fas fa-user-plus"></i> &nbsp;SIgn up
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn text-light" data-bs-toggle="modal" data-bs-target="#SigninModal">
+              <i class="fas fa-sign-in-alt"></i> &nbsp; Sign in
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="row  mx-5" style="display: inline-block;" id="hd">
+        <div style="display: inline-block;">
+          <form style="display: inline-block;">
+            <span style="display: inline-block;">
+              <p style="display: inline-block; margin-right: 10px;">
+                <b>I'm looking for</b><br>
+                <select style="display: inline-block;">
+                  <option>Women</option>
+                  <option>Men</option>
+                </select>
+              </p>
+            </span>
+            <span style="display: inline-block;">
+              <p style="display: inline-block; margin-right: 10px;">
+                <b>aged</b> <br>
+                <select style="display: inline-block;">
+                  <option>18</option>
+                  <option>19</option>
+                  <option>20</option>
+                  <option>21</option>
+                  <option>22</option>
+                  <option>23</option>
+                  <option>24</option>
+                </select>
+                &nbsp;&nbsp;to&nbsp;&nbsp;
+                <select style="display: inline-block;">
+                  <option>30</option>
+                  <option>31</option>
+                  <option>32</option>
+                  <option>33</option>
+                  <option>34</option>
+                  <option>35</option>
+                  <option>36</option>
+                </select>
+              </p>
+            </span>
+            <span style="display: inline-block;">
+              <p style="display: inline-block; margin-right: 10px;">
+                <b>Of religion</b><br>
+                <select>
+                  <option>Select</option>
+                  <option>Hindu</option>
+                  <option>Muslim</option>
+                  <option>Shikh</option>
+                  <option>Christian</option>
+                </select>
+              </p>
+            </span>
+
+            <span style="display: inline-block; margin-top: -26px;">
+              <p style="display: inline-block; margin-right: 10px;">
+              <p><b>And mother tongue</b><br>
+                <select>
+                  <option>Select</option>
+                  <option>Hindi</option>
+                  <option>Urdu</option>
+                  <option>English</option>
+                  <option>Arabic</option>
+                  <option>Punjabi</option>
+                  <option>Bengali</option>
+                  <option>malyalam</option>
+                  <option>Telugu</option>
+
+                </select>
+              </p>
+            </span>
+
+            <span style="display: inline-block;">
+              <p style="display: inline-block; margin-right: 10px;">
+                <input type="button" value="Lets Begin" onclick="search()" style="background-color:rgb(65, 183, 223);">
+              </p>
+            </span>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <!--Nav bar some part-->
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="SignupModal" tabindex="-1" aria-labelledby="SignupModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="SignupModalLabel">
+              <h2>Sign Up</h2>
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <input type="text" placeholder="Full Name" required>
+              <input type="email" placeholder="Email" required>
+              <input type="password" placeholder="Password" required>
+              <input type="password" placeholder="Confirm Password" required>
+              <input type="date" placeholder="Date of Birth" required>
+              <input type="text" placeholder="City" required>
+              <input type="text" placeholder="Religion" required>
+              <input type="submit" value="Sign Up">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Modal End -->
+
+    <!-- Sign in Modal -->
+    <div class="modal fade" id="SignINModal" tabindex="-1" aria-labelledby="SigninModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="SigninModalLabel">
+              <h2>Sign In!</h2>
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+
+              <input type="text" placeholder="Username" required>
+              <input type="password" placeholder="Password" required>
+              <input type="submit" value="Sign In">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Forgat Password</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign in Modal End-->
+
+    <!-- nAv Bar End -->
+
+    <div class="row bg-secondary-subtle">
+      <div class="row">
+        <div class="col-sm-12 mt-5 text-center text-danger">
+          <h2>Find your Special Someone</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 mt-5 text-center">
+          <div class="section ">
+            <img src="images/signup.jpeg" width="30%" style="border-radius:100px;">
+            <div class="h4 text-info mt-5">Sign Up</div>
+            <p>Register for free & put up your Matrimony Profile</p>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-5 text-center">
+          <div class="section ">
+            <img src="images/connect.png" width="30%" style="border-radius:70px;">
+            <div class="h4 text-info mt-5">Connect</div>
+            <p>Select & Connect with Matches you like</p>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-5 mb-5 text-center">
+          <div class="section ">
+            <img src="images/interact.png" width="30%">
+            <div class="h4 text-info mt-5">Interact</div>
+            <p>Become a Premium Member & Start a Conversation</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row m-auto text-danger text-center ps3-5">
+        <div class="col-sm-12 mt-5 text-center ps-5">
+          <h2><b>Matches & Counting</b></h2>
+        </div>
+        <div class="col-sm-3 mt-4 ">
+          <div class="card m-auto" style="width: 80%;">
+            <img src="images/jodi1.jpeg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+              <h5 class="card-title">Supriya & sarjeet</h5>
+              <p class="card-text">we had initially sent request to each other and get a happy life.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-4">
+          <div class="card m-auto" style="width: 80%;">
+            <img src="images/jodi2.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+              <h5 class="card-title">Feroz & Hania</h5>
+              <p class="card-text">I am very glad that i found a perfect match for me on this wwbsite.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-4">
+          <div class="card m-auto" style="width: 80%;">
+            <img src="images/jodi3.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+              <h5 class="card-title">Ranjeet & Priya</h5>
+              <p class="card-text">It was a mesmerizing experience, we met in our life to be reachable.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-4">
+          <div class="card m-auto" style="width: 80%;">
+            <img src="images/jodi4.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+              <h5 class="card-title">Sumit & Shrishty</h5>
+              <p class="card-text">So basically we met on this Platform and very happy to our life.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row m-auto text-danger mt-5 text-center ps3-5">
+        <div class="col-sm-3 mt-4 ">
+          <div class="card m-auto" style="width: 80%;">
+            <img src="images/jodi5.jpeg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+              <h5 class="card-title">Sonia & Aman</h5>
+              <p class="card-text">we had initially sent request to each other and get a happy life.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-4">
+          <div class="card m-auto" style="width: 80%;">
+            <img src="images/jodi6.jpeg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+              <h5 class="card-title">Neha & Ravi</h5>
+              <p class="card-text">I am very glad that i found a perfect match for me on this wwbsite.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-4">
+          <div class="card m-auto" style="width: 80%;">
+            <img src="images/jodi7.jpeg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+              <h5 class="card-title">Kajal & Sohan</h5>
+              <p class="card-text">It was a mesmerizing experience, we met in our life to be reachable.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-4">
+          <div class="card m-auto" style="width: 80%;">
+            <img src="images/jodi8.jpeg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+              <h5 class="card-title">Sakshi & Sumit</h5>
+              <p class="card-text">So basically we met on this Platform and very happy to our life.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5 text-center bg-danger text-light" id="bb">
+        <div class="col-sm-12 mt-3 ">
+          <h4>Your story is waiting to happen! &nbsp;&nbsp;&nbsp;&nbsp; <input type="button" value="Get Started"
+              style="padding:10px;" /></h4>
+        </div>
+      </div>
+      <div class="row mt-5 text-center">
+        <div class="col-sm-3">
+          <h4>Need Help ?</h4>
+          <hr>
+          <p><a href="#" style="color: black; text-decoration: none;">Member Login</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Sign Up</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Partner Search</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">How to Use It</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Premium Memberships</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Customer Support</a></p>
+        </div>
+        <div class="col-sm-3">
+          <h4>Company</h4>
+          <hr>
+          <p><a href="#" style="color: black; text-decoration: none;">About Us</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Shaadi Blog</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Careers</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Cov-Aid</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Contact Us</a></p>
+        </div>
+        <div class="col-sm-3">
+          <h4>Privacy & You</h4>
+          <hr>
+          <p><a href="#" style="color: black; text-decoration: none;">Terms of Use</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Privacy Policy</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Be Safe Online</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Report Misuse</a></p>
+        </div>
+        <div class="col-sm-3">
+          <h4>More</h4>
+          <hr>
+          <p><a href="#" style="color: black; text-decoration: none;">VIP Shaadi</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Select Shaadi</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Sangam</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Shaadi Centres</a></p>
+          <p><a href="#" style="color: black; text-decoration: none;">Shaadi Live</a></p>
+        </div>
+
+        <hr>
+
+        <H4>&COPY; Copyright 2023 Made By- <span style="color:#d04">Sumit Sharma</span></H4>
+      </div>
+
+
+    </div>
+
+
+  </div>
+</body>
+
+</html>
